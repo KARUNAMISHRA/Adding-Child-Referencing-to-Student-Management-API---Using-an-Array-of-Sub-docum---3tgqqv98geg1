@@ -1,4 +1,4 @@
-// Import Mongoose
+ // Import Mongoose
 const mongoose = require('mongoose');
 
 // Subject Schema
@@ -29,6 +29,14 @@ const studentSchema = new mongoose.Schema({
     },
     //Add Child Referencing For Subjects Here. 
     // subjects: []
+     subjects: [{
+
+        type: mongoose.Schema.Types.ObjectId,
+
+        ref: 'Subject'
+
+    }]
+
 });
 
 // Create the models
